@@ -11,6 +11,8 @@ namespace SpeedTestLogger
         public readonly int LoggerId;
         public readonly RegionInfo LoggerLocation;
 
+        public readonly Uri ApiUrl;
+
         public LoggerConfiguration()
         {
             var builder = new ConfigurationBuilder()
@@ -28,6 +30,8 @@ namespace SpeedTestLogger
 
             UserId = configuration["userId"];
             LoggerId = Int32.Parse(configuration["loggerId"]);
+
+            ApiUrl = new Uri(configuration["speedTestApiUrl"]);
         }
     }
 }
