@@ -30,6 +30,8 @@ namespace SpeedTestLogger
         {
             var json = JsonConvert.SerializeObject(result);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
+            
+            Console.WriteLine(json); // TODO: debugging...
 
             return await PostTestResult(content);
         }

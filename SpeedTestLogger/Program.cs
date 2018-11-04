@@ -20,7 +20,7 @@ namespace SpeedTestLogger
             var testData = runner.RunSpeedTest();
             var results = new TestResult
             {
-                SessionId = new Guid(),
+                //SessionId = new Guid(),
                 User = "cloud-101-testuser",
                 Device = 1,
                 Timestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds(),

@@ -60,7 +60,7 @@ namespace SpeedTestLogger
                     Longitude = server.Longitude,
                     // What are we going to do with this? // Use the new private function
                     Country = GetISORegionNameFromEnglishName(server.Country),
-                    Distance = server.Distance,
+                    Distance = (decimal) server.Distance,
                     Ping = server.Latency,
                     Id = server.Id
                 }
